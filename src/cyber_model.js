@@ -19,13 +19,13 @@ export function getAssets() {
 
 export function getAsset(id) {
     let rows = [];
-    db.all(`SELECT * FROM assets WHERE asset_id = ?`, [id], (err, queryRows) => {
+    db.get(`SELECT * FROM assets WHERE asset_id = ?`, [id], (err, queryRows) => {
         if (err) {
             throw err;
         }
         rows = queryRows;
     });
-    return rows[0];
+    return rows;
 }
 
 export function addAsset(data) {
@@ -34,4 +34,12 @@ export function addAsset(data) {
             throw err;
         }
     })
+}
+
+export function deleteAsset(id) {
+    db.run(`DELETE FROM assets WHERE asset_id = ?`, [id], (err) => {
+        if (err) {
+            throw err;
+        }
+    });
 }
