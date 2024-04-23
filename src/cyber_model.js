@@ -17,6 +17,17 @@ export function getAssets() {
     return rows;
 }
 
+export function getAsset(id) {
+    let rows = [];
+    db.all(`SELECT * FROM assets WHERE asset_id = ?`, [id], (err, queryRows) => {
+        if (err) {
+            throw err;
+        }
+        rows = queryRows;
+    });
+    return rows[0];
+}
+
 export function addAsset(data) {
     db.run( `INSERT INTO assets(name, type, serial_number, operating_system, department) VALUES (?, ?, ?, ?, ?)`, [...data.split(",")], (err) => {
         if (err) {
