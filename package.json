@@ -1,0 +1,23 @@
+{
+  "name": "cork-rest-api",
+  "version": "1.0.0",
+  "description": "A RESTful API for the Cork Hiring Process",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maple-riemer/cork-rest-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maple-riemer/cork-rest-api/issues"
+  },
+  "homepage": "https://github.com/maple-riemer/cork-rest-api#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
