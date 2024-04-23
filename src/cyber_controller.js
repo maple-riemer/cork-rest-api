@@ -1,4 +1,4 @@
-import { getAssets, getAsset, deleteAsset, addAsset } from './cyber_model'
+import { getAssets, getAsset, deleteAsset, addAsset } from './cyber_model.js'
 
 export const getDBAsset = (req, res) => {
     try {
